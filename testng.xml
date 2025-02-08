@@ -3,12 +3,12 @@
 <suite name="GroupSuite">
   <test thread-count="5" name="GroupTest">
 	  <groups>
-		  <run>
-			  <include name="Regression"></include> 
-			  <exclude name="Sanity"></exclude>
-		  </run>
-	  </groups>  
-	    <classes>
+		<run>
+			<include name="Sanity"></include>
+			<exclude name="Regression"></exclude>
+		</run>  
+	  </groups> 
+	   <classes>
       <class name="testCases.CheckoutStepTwoPageTest"/>
     </classes>
   </test> <!-- GroupTest -->

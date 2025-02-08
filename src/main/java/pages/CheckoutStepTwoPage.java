@@ -22,10 +22,63 @@ public class CheckoutStepTwoPage extends TestBase
 	@FindBy(xpath="//div[@class='summary_tax_label']") private WebElement taxTxt;
 	@FindBy(xpath="//div[@class='summary_total_label']") private WebElement totalTxt;
 	
+	@FindBy(xpath="//button[@id='cancel']") private WebElement cancleBtn;
+	@FindBy(xpath="//button[@id='finish']") private WebElement finishBtn;
+	@FindBy(xpath="//a[@class='shopping_cart_link']") private WebElement shoppingCart;
+	@FindBy(xpath="//a[text()='Twitter']") private WebElement twitterLogo;
+	@FindBy(xpath="//a[text()='Facebook']") private WebElement facebookLogo;
+	@FindBy(xpath="//a[text()='LinkedIn']") private WebElement linkedInLogo;
+	@FindBy(xpath="//div[@class='footer_copy']") private WebElement footerTxt;
+	
+ 	@FindBy(xpath="//button[text()='Open Menu']") private WebElement openMenu;
+ 	
 	public CheckoutStepTwoPage() 
 	{
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	public String clickOnOpenMenu() 
+	{
+		openMenu.click();
+		return driver.getCurrentUrl();
+	}
+	public String clickOnCancleBtn() 
+	{
+		cancleBtn.click();
+		return driver.getCurrentUrl();		
+	}
+	public String clickOnFinishBtn() 
+	{
+		finishBtn.click();
+		return driver.getCurrentUrl();		
+	}
+	public String verifyShoppingCart() 
+	{
+		shoppingCart.click();
+		return driver.getCurrentUrl();		
+	}
+	public boolean verifyTwitterLogo() 
+	{
+		return twitterLogo.isDisplayed();		
+	}
+	public boolean verifyFacebookLogo() 
+	{
+		return facebookLogo.isDisplayed();			
+	}
+	public boolean verifyLinkedInLogo() 
+	{	
+		return linkedInLogo.isDisplayed();			
+	}
+	public String getFooterTxt() 
+	{
+		return footerTxt.getText();
+		
+	}
+	
+	
+	
+	
 	
 	public String verifytitleOfCheckoutStepTwo() 
 	{

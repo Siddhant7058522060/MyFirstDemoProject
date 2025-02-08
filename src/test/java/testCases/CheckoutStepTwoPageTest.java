@@ -22,7 +22,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 	LoginPage Login;
 	InventoryPage Invent;
 	CartPage Cart;
-	CheckoutStepOnePage Checkout1;
+	CheckoutStepOnePage checkout1;
 	CheckoutStepTwoPage checkout2;
 	
 	@BeforeMethod(alwaysRun = true)
@@ -33,16 +33,83 @@ public class CheckoutStepTwoPageTest extends TestBase
 	   Login = new LoginPage();
 	   Invent = new InventoryPage();
 	   Cart = new CartPage();
-	   Checkout1 = new CheckoutStepOnePage();
+	   checkout1 = new CheckoutStepOnePage();
 	   checkout2 = new CheckoutStepTwoPage();
 	   Login.LoginToApplication();  
 	   Invent.Add6ProductsToCart();
 	   Invent.clickOnCartIcon();
 	   Cart.checkoutCart();
 	
-	   Checkout1.informationt();
+	   checkout1.informationt();
 	}
-	@Test(groups = {"Sanity","Regression"})
+	@Test
+	public void clickOnOpenMenuTest() 
+	{
+		String expUrl= "https://www.saucedemo.com/checkout-step-two.html";
+		String actUrl = checkout2.clickOnOpenMenu();
+		Assert.assertEquals(expUrl, actUrl);
+		Reporter.log("verify open menu page =" +actUrl);
+	}
+	
+	@Test(groups="Sanity")
+	
+	public void clickOnCancleBtnTest() 
+	{
+		String expUrl = "https://www.saucedemo.com/inventory.html";
+		String actUrl = checkout2.clickOnCancleBtn();
+		Assert.assertEquals(expUrl, actUrl);
+		Reporter.log(" Click on Cancle Button="+actUrl);
+	}
+	@Test(groups="Sanity")
+	public void clickOnFinishBtnTest() 
+	{
+		String expUrl = "https://www.saucedemo.com/checkout-complete.html";
+		String actUrl = checkout2.clickOnFinishBtn();
+		Assert.assertEquals(expUrl, actUrl);
+		Reporter.log(" Click on Finish Button="+actUrl);
+	}
+	@Test(groups="Sanity")
+	public void verifyShoppingCartTest() 
+	{
+		String expUrl = "https://www.saucedemo.com/cart.html";
+		String actUrl = checkout2.verifyShoppingCart();
+		Assert.assertEquals(expUrl, actUrl);
+		Reporter.log(" Verify Shopping Cart="+actUrl);
+	}
+	@Test(groups="Sanity")
+	public void getFooterTxtTest() 
+	{
+		String expUrl = "© 2025 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
+		String actUrl = checkout2.getFooterTxt();
+		Assert.assertEquals(expUrl, actUrl);
+		Reporter.log(" Fetch Footer Text="+actUrl);
+	}
+	@Test(groups={"Sanity","Regression"})
+	public void verifyTwitterLogoTest() 
+	{
+		boolean result = checkout2.verifyTwitterLogo();
+		Assert.assertEquals(result, true);
+		Reporter.log(" Verify Twitter Logo ="+result);
+	}
+	@Test(groups="Sanity")
+	public void verifyFacebookLogoTest() 
+	{
+		boolean result = checkout2.verifyFacebookLogo();
+		Assert.assertEquals(result, true);
+		Reporter.log(" Verify Facebook Logo="+result);
+	}
+	@Test(groups="Sanity")
+	public void verifyLinkedInLogoTest() 
+	{
+		boolean result = checkout2.verifyLinkedInLogo();
+		Assert.assertEquals(result, true);
+		Reporter.log(" Verify LinkedIn Logo="+result);
+	}
+	
+	
+	
+	
+	@Test    // (groups = {"Sanity","Regression"})
 	
 	public void verifytitleOfCheckoutStepTwoTest() 
 	{
@@ -51,7 +118,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Title ="+actTitle);
 	}
-	@Test(groups = {"Retest","Regression"})
+	@Test    //(groups = {"Retest","Regression"})
 	public void verifycheckOutOverviewTxtTest() 
 	{
 		String expTitle = "Checkout: Overview";     // Checkout: Overview
@@ -59,7 +126,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt checkout overview ="+actTitle);	
 	}
-	@Test(groups = "Sanity")
+	@Test   // (groups = "Sanity")
 	public void verifyqtyxtTest() 
 	{
 		String expTitle = "QTY";			// QTY
@@ -67,7 +134,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt QTY ="+actTitle);
 	}
-	@Test(groups = "Sanity")
+	@Test  // (groups = "Sanity")
 	public void verifydescriptionTxtTest() 
 	{
 		String expTitle = "Description"; 		//Description
@@ -77,7 +144,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 	}
 	
 	
-	@Test(groups = "Regression")
+	@Test  // (groups = "Regression")
 	public void verifypaymentInfoTxtTest() 
 	{
 		String expTitle = "Payment Information:";		// Payment Information:
@@ -85,7 +152,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt payment information ="+actTitle);		
 	}
-	@Test(groups = {"Regression","Retest"})
+	@Test // (groups = {"Regression","Retest"})
 	public void verifysauceCardTxtTest() 
 	{
 		String expTitle = "SauceCard #31337";		// SauceCard #31337
@@ -93,7 +160,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt SauceCard ="+actTitle);	
 	}
-	@Test(groups = "Regression")
+	@Test//(groups = "Regression")
 	public void verifyshippingInfoTxtTest() 
 	{
 		String expTitle = "Shipping Information:";		// Shipping Information:
@@ -101,7 +168,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt Shipping Information ="+actTitle);	
 	}
-	@Test(groups = "Regression")
+	@Test//(groups = "Regression")
 	public void verifyfreePonyExpDeliveryTxtTest() 
 	{
 		String expTitle = "Free Pony Express Delivery!";   // Free Pony Express Delivery!
@@ -109,7 +176,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt Free Pony Express Delivery ="+actTitle);	
 	}
-	@Test(groups = "Sanity")
+	@Test//(groups = "Sanity")
 	public void verifypriceTotalTxtTest() 
 	{
 		String expTitle = "Price Total";		// Price Total
@@ -117,7 +184,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt Price Total ="+actTitle);
 	}
-	@Test(groups = {"Regression", "Retest"})
+	@Test//(groups = {"Regression", "Retest"})
 	public void verifyitemTotalTxtTest() 
 	{
 		String expTitle = "Item total: $129.94";
@@ -125,7 +192,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt Item total ="+actTitle);	
 	}
-	@Test(groups = "Sanity")
+	@Test//(groups = "Sanity")
 	public void verifytaxTxtTest() 
 	{
 		String expTitle = "Tax: $10.40";
@@ -133,7 +200,7 @@ public class CheckoutStepTwoPageTest extends TestBase
 		Assert.assertEquals(expTitle, actTitle);
 		Reporter.log("Txt Tax ="+actTitle);	
 	}
-	@Test(groups = "Regression")
+	@Test//(groups = "Regression")
 	public void verifytotalTxtTest() 
 	{
 		String expTitle = "Total: $140.34";

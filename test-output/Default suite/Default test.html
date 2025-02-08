@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 07 23:59:32 IST 2025</td>
+<td>Started on:</td><td>Sun Feb 09 01:39:28 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14330 ms)</td>
+<tr><td>Total time:</td><td>130 seconds (130531 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,93 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyUrlOfBackHomeTest()'><b>verifyUrlOfBackHomeTest</b><br>Test class: testCases.CheckOutCompletePageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/checkout-complete.html] but found [https://www.saucedemo.com/inventory.html]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at testCases.CheckOutCompletePageTest.verifyUrlOfBackHomeTest(CheckOutCompletePageTest.java:107)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace17435166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace17435166'><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/checkout-complete.html] but found [https://www.saucedemo.com/inventory.html]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at testCases.CheckOutCompletePageTest.verifyUrlOfBackHomeTest(CheckOutCompletePageTest.java:107)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,17 +163,125 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.LoginPageTest.LoginToApplicationTest()'><b>LoginToApplicationTest</b><br>Test class: testCases.LoginPageTest<br/>
-<a href="#Output-1955226954" onClick='toggleBox("Output-1955226954", this, "Show output", "Hide output");'>Show output</a>
+<td title='testCases.CheckOutCompletePageTest.verifyFooterTxtTest()'><b>verifyFooterTxtTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1043822951" onClick='toggleBox("Output-1043822951", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1955226954" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1955226954">
-Logged in Url =https://www.saucedemo.com/inventory.html<br/>
+<a href="#Output-1043822951" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1043822951">
+Verify Footer Text =© 2025 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy<br/>
 </div>
 </td>
 <td></td>
-<td>3</td>
-<td>testCases.LoginPageTest@398dada8</td></tr>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyTwitterLogo()'><b>verifyTwitterLogo</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-101149798" onClick='toggleBox("Output-101149798", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-101149798" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-101149798">
+Linked In Logo Is Display =true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyShoppingCartTest()'><b>verifyShoppingCartTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1506030945" onClick='toggleBox("Output-1506030945", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1506030945" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1506030945">
+Shopping Cart Link =<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyFacebookLogoTest()'><b>verifyFacebookLogoTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-979387846" onClick='toggleBox("Output-979387846", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-979387846" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-979387846">
+Linked In Logo Is Display =true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyTickMarkImgTest()'><b>verifyTickMarkImgTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1982591789" onClick='toggleBox("Output-1982591789", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1982591789" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1982591789">
+Tick Mark Logo is Display =true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyCompleteTextTest()'><b>verifyCompleteTextTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-904031493" onClick='toggleBox("Output-904031493", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-904031493" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-904031493">
+Fetch Complete Text =Your order has been dispatched, and will arrive just as fast as the pony can get there!<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyThankYouForYourOrderTest()'><b>verifyThankYouForYourOrderTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1171538461" onClick='toggleBox("Output-1171538461", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1171538461" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1171538461">
+Thank You For Your Order =Thank you for your order!<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyLinkedInLogoTest()'><b>verifyLinkedInLogoTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1952874090" onClick='toggleBox("Output-1952874090", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1952874090" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1952874090">
+Linked In Logo Is Display =true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyCheckOutCompleteTest()'><b>verifyCheckOutCompleteTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1441014857" onClick='toggleBox("Output-1441014857", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1441014857" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1441014857">
+Checkout Complete =Checkout: Complete!<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
+<tr>
+<td title='testCases.CheckOutCompletePageTest.verifyTitleOfAppTest()'><b>verifyTitleOfAppTest</b><br>Test class: testCases.CheckOutCompletePageTest<br/>
+<a href="#Output-1833045213" onClick='toggleBox("Output-1833045213", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1833045213" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1833045213">
+Title Of Application =Swag Labs<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.CheckOutCompletePageTest@34f6515b</td></tr>
 </table><p>
 </body>
 </html>
